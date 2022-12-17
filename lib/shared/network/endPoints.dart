@@ -1,0 +1,14 @@
+String loginPath="userData";
+String signupPath="register";
+String shopHomePath="home";
+String getCategoriesPath="categories";
+String categoryDetailPath="categories/";
+String favoritePath="favorites";
+String profilePath="profile";
+String productDetailsPath="products";
+String searchProductPath="products/search";
+String cartsPath="carts";
+String changePasswordPath="change-password";
+String updateProfilePath="update-profile";
+String logoutPath="logout";
+String aboutPath="settings";
