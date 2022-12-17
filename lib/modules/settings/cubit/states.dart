@@ -2,7 +2,6 @@ import 'package:ap/models/userData/userDataModel.dart';
 
 abstract class ProfileStates {}
 class ProfileInitialState extends ProfileStates {}
-class Refresh extends ProfileStates{}
 //profile
 class ProfileLoadingState extends ProfileStates {}
 class ProfileSuccessState extends ProfileStates {
