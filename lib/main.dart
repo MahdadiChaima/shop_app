@@ -57,11 +57,10 @@ class MyApp extends StatelessWidget {
         child: BlocConsumer<ShopCubit, ShopStates>(
             listener: (context, state) {},
             builder: (context, state) {
-              ShopCubit cubit = ShopCubit.get(context);
              return MaterialApp(
                 debugShowCheckedModeBanner: false,
                 theme: lightTheme,
-                home: startWidget,
+                home: OnBoardingScreen(),
               );
             }));
   }

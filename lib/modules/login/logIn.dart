@@ -101,12 +101,14 @@ class LogIn extends StatelessWidget {
                             : const Center(
                                 child: CircularProgressIndicator(),
                               ),
-                        Row(children: [
-                          defaultText(text: "Don't have an account? "),
-                          defaultTextButton(
-                              widget: const SignUp(),
-                              textButton: "Register here",
-                              context: context),],),
+                        Container(
+                          child: Row(children: [
+                            defaultText(text: "Don't have an account? "),
+                            defaultTextButton(
+                                widget: const SignUp(),
+                                textButton: "Register here",
+                                context: context),],),
+                        ),
                       ],
                     ),
                   ),
@@ -133,6 +135,11 @@ class LogIn extends StatelessWidget {
                   context, thirdColor, state.loginModel.message!);
             }
           }
+          if (state is LoginErrorState) {
+            defaultSnackBarMaterial(context,Colors.redAccent,"No Internet Connection");
+
+          }
+
         },
       ),
     );

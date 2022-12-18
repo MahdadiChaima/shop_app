@@ -1,4 +1,4 @@
-String loginPath="userData";
+String loginPath="login";
 String signupPath="register";
 String shopHomePath="home";
 String getCategoriesPath="categories";

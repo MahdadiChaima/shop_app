@@ -36,37 +36,39 @@ class UpdateProfileScreen extends StatelessWidget {
       return Scaffold(
           appBar: AppBar(),
           body:
-            Column(crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                titleContainer(text: "Edit Profile"),
-                Padding(
-                  padding: const EdgeInsets.only(top: 180.0,left: 20,right: 20),
-                  child: Form(key: keyForm,
-                    child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+            SingleChildScrollView(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  titleContainer(text: "Edit Profile"),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 180.0,left: 20,right: 20),
+                    child: Form(key: keyForm,
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
 
-                        defaultTextField(controller: nameController..text = name, prefix: Icons.person,type: TextInputType.name, text: "Name",textForUnValid: "Enter your name"),
-                        SizedBox(height: 20,),
-                        defaultTextField(controller: phoneController..text = phone, prefix: Icons.phone,type: TextInputType.number, text: "Phone",textForUnValid: "Enter your phone"),
-                        SizedBox(height: 20,),
-                        defaultTextField(controller: emailController..text = email, prefix: Icons.email,type: TextInputType.name, text: "Email",textForUnValid: "Enter your email"),
-                        SizedBox(height: 60,),
-                        state is!UpdateProfileLoadingState?
-                        defaultMaterialButton(function: (){
-                         if (keyForm.currentState!.validate()) {
-                           print(nameController.text);
-                           print(phoneController.text);
-                           print(emailController.text);
-                           ProfileCubit.get(context).updateProfile(name:nameController.text,email:emailController.text,phone:phoneController.text,);
+                          defaultTextField(controller: nameController..text = name, prefix: Icons.person,type: TextInputType.name, text: "Name",textForUnValid: "Enter your name"),
+                          SizedBox(height: 20,),
+                          defaultTextField(controller: phoneController..text = phone, prefix: Icons.phone,type: TextInputType.phone, text: "Phone",textForUnValid: "Enter your phone"),
+                          SizedBox(height: 20,),
+                          defaultTextField(controller: emailController..text = email, prefix: Icons.email,type: TextInputType.name, text: "Email",textForUnValid: "Enter your email"),
+                          SizedBox(height: 60,),
+                          state is!UpdateProfileLoadingState?
+                          defaultMaterialButton(function: (){
+                           if (keyForm.currentState!.validate()) {
+                             print(nameController.text);
+                             print(phoneController.text);
+                             print(emailController.text);
+                             ProfileCubit.get(context).updateProfile(name:nameController.text,email:emailController.text,phone:phoneController.text,);
 
 
-                         }
+                           }
 
-                        }, textButton: "Save", isEnabled: true):Center(child:CircularProgressIndicator()),
-                    ],),
+                          }, textButton: "Save", isEnabled: true):Center(child:CircularProgressIndicator()),
+                      ],),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             )
 
         );});

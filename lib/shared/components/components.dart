@@ -31,7 +31,7 @@ Widget titleContainer({@required String? text}) => Container(
 Widget defaultText(
         {required String text,
         bool? googleFont = false,
-        double? fontSize = 17,
+        double? fontSize = 16,
         Color? color = titleTextColor,
         FontWeight? fontWeight = FontWeight.normal}) =>
     Text(
@@ -74,7 +74,7 @@ Widget defaultTextButton(
         context,
         double padding = 0.1,
         bool googleFont = false,
-        double fontSize = 19,
+        double fontSize = 18,
         Color color = thirdTextColor,
         FontWeight fontWeight = FontWeight.w700}) =>
     TextButton(
@@ -110,7 +110,7 @@ Widget defaultTextField({
         autocorrect: true,
         controller: controller,
         onTap: () {
-          onTap!();
+         // onTap!();
         },
         validator: (value) {
           if (value!.isEmpty) {
@@ -124,7 +124,7 @@ Widget defaultTextField({
           onSubmit!(value);
         },
         obscureText: isPassword ? true : false,
-        keyboardType: TextInputType.visiblePassword,
+        keyboardType: type,
         decoration: InputDecoration(
           label: defaultText(
               text: " $text",
@@ -147,7 +147,7 @@ Widget defaultTextField({
       ),
     );
 ScaffoldFeatureController<SnackBar, SnackBarClosedReason> defaultSnackBarMaterial(context,Color color,String message)=> ScaffoldMessenger.of(context).showSnackBar(SnackBar(backgroundColor: color,
-  duration:const Duration(seconds: 6) ,
+  duration:const Duration(seconds: 2) ,
   content: defaultText(text:message,googleFont: true,fontSize: 18,color: primaryLightColor,fontWeight: FontWeight.w600 ),
 
 )

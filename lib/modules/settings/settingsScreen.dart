@@ -73,7 +73,7 @@ class SettingsScreen extends StatelessWidget {
                   flex: 1,
                   child: IconButton(
                       onPressed: () {
-                       // function();
+                        function();
                       },
                       icon: Icon(
                         Icons.arrow_forward_ios_outlined,

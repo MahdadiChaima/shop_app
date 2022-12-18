@@ -31,7 +31,7 @@ class SignUp extends StatelessWidget {
               children: [
                 titleContainer(text: "Register"),
                 Padding(
-                  padding: const EdgeInsets.only(top: 110, right: 40, left: 40),
+                  padding: const EdgeInsets.only(top: 100, right: 40, left: 40),
                   child: Form(
                     key: keyForm,
                     child: Column(

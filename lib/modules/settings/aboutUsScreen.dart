@@ -26,7 +26,7 @@ class AboutUsScreen extends StatelessWidget {
                       padding:
                           const EdgeInsets.only(top: 120.0, left: 15, right: 15),
                       child: Container(
-                        height: 240,
+                        height: 250,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           border: Border.all(

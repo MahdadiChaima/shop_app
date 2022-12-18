@@ -87,11 +87,11 @@ class ProfileScreen extends StatelessWidget {
   );
   Widget buildItem(String title,String item)=>Padding(
     padding: const EdgeInsets.all(20.0),
-    child: Row(children: [defaultText(text: "${title}:",googleFont: true,fontSize: 24,fontWeight: FontWeight.w600,color: primaryColor),
+    child: Row(children: [defaultText(text: "${title}:",googleFont: true,fontSize: 22,fontWeight: FontWeight.w600,color: primaryColor),
       Spacer(),
       Padding(
         padding: const EdgeInsets.only(right: 10.0),
-        child: defaultText(text: item,googleFont: true,fontSize: 24,fontWeight: FontWeight.w400),
+        child: defaultText(text: item,googleFont: true,fontSize: 22,fontWeight: FontWeight.w400),
       ),],),
   );
 }
