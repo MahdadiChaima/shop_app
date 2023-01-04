@@ -1,20 +1,15 @@
 <<<<<<< HEAD
 # shop_app
 =======
-# ap
+ShopApp is an e-commerce application that show products in some categories like Electronics, Men's Clothes and Women's Clothes and sports equipments, user can add product to his favorites or add it to his cart in an easy way, user can find what he need fast By searching for the product by name.
 
-Ecommerce Application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> f6e34f5 (first commit)
+# Application Features
+=======
+  . simple interface and easy to use.
+  . Determine the category to which the product you want to buy belongs, so that you can reach it faster.
+  . save your favorite products in the favorites list.
+  . find products category 
+  . find what you need fast By searching for the product by name.
+  . you can edit your personal information in an easy way.
+  . no Ads
+  
